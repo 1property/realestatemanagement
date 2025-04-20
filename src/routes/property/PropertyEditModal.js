@@ -1,17 +1,17 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
- 
-const PropertyEditModal = ({ show, onClose, onSave, lead, handleChange }) => {
+
+const PropertyEditModal = ({ show, onClose, onSave, property, handleChange }) => {
   if (!show) {
     return null;
   }
- 
+
   return (
     <div className="modal fade show" style={{ display: "block" }}>
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">Edit Lead</h5>
+            <h5 className="modal-title">Edit Property</h5>
             <button
               type="button"
               className="btn-close"
@@ -29,33 +29,22 @@ const PropertyEditModal = ({ show, onClose, onSave, lead, handleChange }) => {
                   className="form-control"
                   id="name"
                   name="name"
-                  value={lead.name}
+                  value={property
+                    .name}
                   onChange={handleChange}
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="phone" className="form-label">
-                  Phone
+                <label htmlFor="price" className="form-label">
+                  Price
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="phone"
-                  name="phone"
-                  value={lead.phone}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  name="email"
-                  value={lead.email}
+                  id="price"
+                  name="price"
+                  value={property
+                    .price}
                   onChange={handleChange}
                 />
               </div>
@@ -64,65 +53,125 @@ const PropertyEditModal = ({ show, onClose, onSave, lead, handleChange }) => {
                   Location
                 </label>
                 <input
-                  type="text"
+                  type="location"
                   className="form-control"
                   id="location"
                   name="location"
-                  value={lead.location}
+                  value={property
+                    .location}
                   onChange={handleChange}
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="property" className="form-label">
-                  Property
+                <label htmlFor="type" className="form-label">
+                  Type
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="property"
-                  name="property"
-                  value={lead.property}
+                  id="type"
+                  name="type"
+                  value={property
+                    .type}
                   onChange={handleChange}
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="source" className="form-label">
-                  Source
+                <label htmlFor="size" className="form-label">
+                  Size
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="source"
-                  name="source"
-                  value={lead.source}
+                  id="size"
+                  name="size"
+                  value={property
+                    .size}
                   onChange={handleChange}
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="followUp" className="form-label">
-                  Follow-Up
-                </label>
-                <input
-                  type="date"
-                  className="form-control"
-                  id="followUp"
-                  name="followUp"
-                  value={lead.followUp}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="status" className="form-label">
-                  Status
+                <label htmlFor="tenure" className="form-label">
+                  Tenure
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="status"
-                  name="status"
-                  value={lead.status}
+                  id="tenure"
+                  name="tenure"
+                  value={property
+                    .tenure}
                   onChange={handleChange}
                 />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="houseType" className="form-label">
+                  House Type
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="houseType"
+                  name="houseType"
+                  value={property
+                    .houseType}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="bedroom" className="form-label">
+                  Bedroom
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="bedroom"
+                  name="bedroom"
+                  value={property
+                    .bedroom}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="bathroom" className="form-label">
+                  Bathroom
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="bathroom"
+                  name="bathroom"
+                  value={property
+                    .bathroom}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="landTitle" className="form-label">
+                  Land Title
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="landTitle"
+                  name="landTitle"
+                  value={property
+                    .landTitle}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="description" className="form-label">
+                  Description
+                </label>
+                <textarea
+                  className="form-control"
+                  id="description"
+                  name="description"
+                  value={property
+                    .description}
+                  onChange={handleChange}
+                ></textarea>
               </div>
               <div className="mb-3">
                 <label htmlFor="notes" className="form-label">
@@ -132,7 +181,8 @@ const PropertyEditModal = ({ show, onClose, onSave, lead, handleChange }) => {
                   className="form-control"
                   id="notes"
                   name="notes"
-                  value={lead.notes}
+                  value={property
+                    .notes}
                   onChange={handleChange}
                 ></textarea>
               </div>
@@ -155,5 +205,5 @@ const PropertyEditModal = ({ show, onClose, onSave, lead, handleChange }) => {
     </div>
   );
 };
- 
+
 export default PropertyEditModal;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
-import DateInput from "../../components/DateInput";
 import Card from "../../components/Card";
 import CardContent from "../../components/CardContent";
 import Textarea from "../../components/Textarea";
@@ -115,11 +114,11 @@ const AddProperty = () => {
           />
           <Input
             name="tenure"
-            placeholder="tenure"
+            placeholder="Tenure"
             value={form.tenure}
             onChange={handleChange}
           />
-          <DateInput
+          <Input
             name="houseType"
             placeholder="House Type"
             value={form.houseType}
@@ -135,6 +134,12 @@ const AddProperty = () => {
             name="bathroom"
             placeholder="No. of Bathrooms"
             value={form.bathroom}
+            onChange={handleChange}
+          />
+          <Input
+            name="landTitle"
+            placeholder="Land Title"
+            value={form.landTitle}
             onChange={handleChange}
           />
           <Textarea

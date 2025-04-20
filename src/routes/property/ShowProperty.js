@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Table from "../../components/Table";
-import Modal from "./PropertyEditModal";
+import PropertyEditModal from "./PropertyEditModal";
 import ConfirmationModal from "../../components/ConfirmationModal";
 import { supabase, propertyTable } from "../../clients/supabaseClient";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -148,11 +148,11 @@ function ShowProperty() {
                     onDelete={handleDelete}
                 />
             )}
-            <Modal
+            <PropertyEditModal
                 show={showModal}
                 onClose={() => setShowModal(false)}
                 onSave={handleSave}
-                lead={currentProperty}
+                property={currentProperty}
                 handleChange={handleChange}
             />
             <ConfirmationModal

@@ -19,7 +19,7 @@ const Table = ({ headers, data, onEdit, onDelete }) => {
           <tr key={rowIndex}>
             {headers.map((header, colIndex) => (
               <td key={colIndex}>
-                {row[header.key.toLowerCase()]}
+                {row[header.key]}
               </td>
             ))}
             <td>
