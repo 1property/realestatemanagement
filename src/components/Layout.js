@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <div className="container mt-5">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="buyerListing" element={<BuyerListing />} />
         <Route path="addBuyerListing" element={<AddBuyerListing />} />
         <Route path="showBuyerListing" element={<ShowBuyerListing />} />
