@@ -69,7 +69,7 @@ function AddBuyerListing() {
  
   return (
     <div className="p-4 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Real Estate Lead Tracker</h1>
+      <h1 className="text-2xl font-bold mb-4">Add Buyer Listing</h1>
       <Card>
         <CardContent className="p-4">
           <Input
